@@ -28,22 +28,22 @@ An AI-powered code review tool built using **React.js** and **Node.js**, designe
 - **Other Tools:** Axios, CodeMirror, CORS
 
 ## 🔮 Future Enhancements
-# Multiple File Support
+**Multiple File Support**
 Enable review for entire projects instead of single files.
 
-# Support for More Languages
+**Support for More Languages**
 Extend analysis to multiple programming languages.
 
-# Analytics Dashboard
+**Analytics Dashboard**
 Visual insights on code improvements over time.
 
-# In-App AI Chatbot
+**In-App AI Chatbot**
 Interactive help and suggestions via chatbot UI.
 
-# User Authentication
+**User Authentication**
 Allow users to save and manage their code reviews.
 
 
-## Thank you for checking out the project! Contributions and suggestions are always welcome. 😊
+# Thank you for checking out the project! Contributions and suggestions are always welcome. 😊
 
 
