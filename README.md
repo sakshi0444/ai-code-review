@@ -1,49 +1,108 @@
-# AI Code Review
+# AI Logo Generator
 
-An AI-powered code review tool built using **React.js** and **Node.js**, designed to review and optimize code with the help of the **Gemini API**. This tool can analyze up to **10,000 lines of code**, offering suggestions for cleaner and more efficient implementations.
+This project is an AI-powered logo generator that creates custom logos based on text descriptions. It uses OpenAI's DALL-E model to generate high-quality, professional logos.
 
-## 🚀 Features
+## Features
 
-- **Automatic Code Review**  
-  Upload your code to receive instant, AI-generated feedback on logic, structure, and best practices.
+- Simple, intuitive user interface
+- AI-powered logo generation
+- High-quality image output
+- Download functionality for generated logos
+- Responsive design for all devices
 
-- **AI-Powered Suggestions**  
-  Get intelligent recommendations to clean and optimize your code using the Gemini API.
+## Project Structure
 
-- **Handles Large Codebases**  
-  Capable of reviewing codebases with up to 10,000 lines of code effectively.
+The project consists of two main parts:
 
-- **Learning Highlights**  
-  This project helped me gain experience with:
-  - Full-stack development using React.js and Node.js
-  - Integrating third-party APIs (Gemini)
-  - Handling large text inputs and displaying results
-  - Improving overall code quality with AI
+1. **Frontend**: React application with a simple UI for entering prompts and displaying generated logos
+2. **Backend**: Express.js server that handles API requests and communicates with AI services
 
-## 🛠 Tech Stack
+## Prerequisites
 
-- **Frontend:** React.js  
-- **Backend:** Node.js, Express  
-- **AI Service:** Gemini API  
-- **Other Tools:** Axios, CodeMirror, CORS
+- Node.js (v14 or higher)
+- npm or yarn
+- OpenAI API key
 
-## 🔮 Future Enhancements
-**Multiple File Support**
-Enable review for entire projects instead of single files.
+## Setup Instructions
 
-**Support for More Languages**
-Extend analysis to multiple programming languages.
+### Backend Setup
 
-**Analytics Dashboard**
-Visual insights on code improvements over time.
+1. Navigate to the Backend directory:
+   ```
+   cd Backend
+   ```
 
-**In-App AI Chatbot**
-Interactive help and suggestions via chatbot UI.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-**User Authentication**
-Allow users to save and manage their code reviews.
+3. Create a `.env` file in the Backend directory with your API keys:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   GOOGLE_GEMINI_KEY=your_gemini_api_key_here
+   ```
 
+4. Start the backend server:
+   ```
+   npm start
+   ```
 
-# Thank you for checking out the project! Contributions and suggestions are always welcome. 😊
+The server will run on http://localhost:3000
 
+### Frontend Setup
+
+1. Navigate to the Frontend directory:
+   ```
+   cd Frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+The frontend will run on http://localhost:5173 (or another port if 5173 is in use)
+
+## How to Use
+
+1. Open the application in your browser
+2. Enter a detailed description of the logo you want to generate
+   - Be specific about colors, style, and elements you want in the logo
+   - Example: "A minimalist logo for a tech startup with blue and green colors, featuring a stylized mountain and a circuit board pattern"
+3. Click the "Generate Logo" button
+4. Wait for the AI to generate your logo (this may take a few seconds)
+5. Once generated, you can download the logo using the "Download Logo" button
+
+## API Endpoints
+
+- `POST /ai/generate-logo`: Generates a logo based on the provided prompt
+  - Request body: `{ "prompt": "Your logo description here" }`
+  - Response: `{ "imageUrl": "URL to the generated image" }`
+
+## Technologies Used
+
+- **Frontend**:
+  - React
+  - Axios for API requests
+  - CSS for styling
+
+- **Backend**:
+  - Express.js
+  - OpenAI API (DALL-E) for image generation
+  - Google Gemini API (for code review functionality)
+
+## License
+
+MIT
+
+## Acknowledgements
+
+- OpenAI for providing the DALL-E API
+- Google for providing the Gemini API
 
