@@ -1,7 +1,8 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 html,
@@ -24,40 +25,125 @@ main .right {
   height: 100%;
   flex-basis: 50%;
   border-radius: 0.7rem;
+  padding: 2rem;
 }
 
 main .left {
-  background-color: #000000;
-  position: relative;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
 }
 
-.left .code,
-.code pre,
-.code pre code {
-  height: 100%;
+main .left h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+main .left p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.input-container {
+  margin-bottom: 1.5rem;
+}
+
+textarea {
   width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
-  background-color: #0c0c0c;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: none;
 }
 
-main .left .review {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 0.5rem 2rem;
+.generate-btn {
+  background-color: #4a6cf7;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
   font-weight: 500;
   cursor: pointer;
-  -webkit-user-select: none;
-  border-radius: 0.7rem;
+  transition: background-color 0.3s;
+  align-self: flex-start;
 }
 
+.generate-btn:hover {
+  background-color: #3a5ce5;
+}
+
+.generate-btn:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e74c3c;
+  margin-top: 1rem;
+}
 
 main .right {
-  background-color: #d6d0d0;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  overflow: auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.placeholder {
+  color: #999;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.generated-logo {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+  margin-top: 1.5rem;
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  
+  main .left,
+  main .right {
+    flex-basis: auto;
+  }
+  
+  main .left {
+    height: auto;
+  }
+  
+  main .right {
+    min-height: 400px;
+  }
+}
+
